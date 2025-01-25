@@ -83,7 +83,7 @@ triviaSdk.fetchQuestions("medium", true, new TriviaSdk.QuestionCallback() {
         Log.e("Trivia", "Error: " + error);
     }
 });
-
+```
 
 Data Model
 
@@ -97,7 +97,7 @@ public class Question {
     private String answer;   // The correct answer
     private String level;    // The difficulty level (e.g., easy, medium, hard)
 }
-
+```
 
 You can access or modify these fields using the provided getters and setters.
 
@@ -110,7 +110,7 @@ The SDK is configured to connect to the following base URL:
 
 ```python
 http://10.100.102.5:5000/
-
+```
 
 Ensure your backend server is running and accessible at this address.
 
