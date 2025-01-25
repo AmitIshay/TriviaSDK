@@ -26,11 +26,20 @@ Step 2: Add dependencies
 
   - Ensure the following dependencies are added to your build.gradle file:
     ```python
-    dependencies {
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    dependencyResolutionManagement {
+      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+        repositories {
+           mavenCentral()
+            maven { url 'https://jitpack.io' }
+        }
     }
 
+    dependencies {
+        implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+        implementation 'com.github.AmitIshay:TriviaSDK:Tag'
+    }
+    ```
 
 #### Usage:
 
