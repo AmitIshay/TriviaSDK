@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
-}
+    id("maven-publish") // שימוש בתוסף המיידי של Maven Publish
 
+
+}
 android {
     namespace = "com.example.triviasdk"
     compileSdk = 34
@@ -38,4 +40,18 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+}
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.AmitIshay" // Change as needed
+                artifactId = "TriviaSDK" // Change as needed
+                version = "1.0.0" // Change as needed
+                artifact(tasks.getByName("bundleReleaseAar"))
+
+                // Add dependencies to the Maven publication configuration (api or implementation)
+            }
+        }
+    }
 }
