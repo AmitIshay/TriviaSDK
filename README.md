@@ -7,3 +7,5 @@
 
 
   - Fetch trivia questions based on difficulty level.
+  - Option to enable AI-generated questions.
+  - Simplified interface for developers.
