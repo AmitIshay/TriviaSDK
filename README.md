@@ -65,4 +65,100 @@ triviaSdk.fetchQuestions("easy", false, new TriviaSdk.QuestionCallback() {
 });
 
 
+Enabling AI-Generated Questions
+
+
+To enable AI-generated questions, pass true for the useAi parameter:
+
+
+```python
+triviaSdk.fetchQuestions("medium", true, new TriviaSdk.QuestionCallback() {
+    @Override
+    public void onSuccess(List<Question> questions) {
+        // Handle AI-generated questions
+    }
+
+    @Override
+    public void onError(String error) {
+        Log.e("Trivia", "Error: " + error);
+    }
+});
+
+
+Data Model
+
+
+The Question class represents a trivia question and contains the following fields:
+
+
+```python
+public class Question {
+    private String question; // The trivia question
+    private String answer;   // The correct answer
+    private String level;    // The difficulty level (e.g., easy, medium, hard)
+}
+
+
+You can access or modify these fields using the provided getters and setters.
+
+
+API Base URL
+
+
+The SDK is configured to connect to the following base URL:
+
+
+```python
+http://10.100.102.5:5000/
+
+
+Ensure your backend server is running and accessible at this address.
+
+
+#### API Details:
+
+
+Endpoints
+
+
+/getQuestions
+
+
+Method: GET
+
+
+Parameters:
+
+
+  - level: The difficulty level (e.g., easy, medium, hard).
+  - use_ai: (Optional) true or false to indicate AI-generated questions.
+
+
+Example Response:
+```python
+[
+    {
+        "question": "What is the capital of France?",
+        "answer": "Paris",
+        "level": "easy"
+    },
+    {
+        "question": "Solve 2 + 2.",
+        "answer": "4",
+        "level": "easy"
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
