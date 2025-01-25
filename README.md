@@ -29,7 +29,40 @@ Step 2: Add dependencies
     dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-}
-```
+    }
+
+
+#### Usage:
+
+
+Initialize the SDK
+
+
+The SDK automatically initializes its API client when you call its methods. No additional setup is required.
+
+
+Fetch Questions
+
+
+To fetch trivia questions:
+```python
+TriviaSdk triviaSdk = new TriviaSdk();
+
+triviaSdk.fetchQuestions("easy", false, new TriviaSdk.QuestionCallback() {
+    @Override
+    public void onSuccess(List<Question> questions) {
+        // Handle the list of questions
+        for (Question question : questions) {
+            Log.d("Trivia", "Question: " + question.getQuestion());
+        }
+    }
+
+    @Override
+    public void onError(String error) {
+        // Handle the error
+        Log.e("Trivia", "Error: " + error);
+    }
+});
+
 
 
