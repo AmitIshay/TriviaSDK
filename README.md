@@ -63,7 +63,7 @@ triviaSdk.fetchQuestions("easy", false, new TriviaSdk.QuestionCallback() {
         Log.e("Trivia", "Error: " + error);
     }
 });
-
+```
 
 Enabling AI-Generated Questions
 
