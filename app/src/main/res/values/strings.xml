@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TriviaDemoApp</string>
+    <string-array name="difficulty_levels">
+        <item>easy</item>
+        <item>medium</item>
+        <item>hard</item>
+    </string-array>
+</resources>
