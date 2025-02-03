@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.triviasdk.Question;
 import com.example.triviasdk.TriviaSdk;
+//import com.github.AmitIshay.triviasdk.TriviaSdk;
+//import com.github.AmitIshay.triviasdk.Question;
 
 import com.example.triviasdk.TriviaSdk.QuestionCallback;
 

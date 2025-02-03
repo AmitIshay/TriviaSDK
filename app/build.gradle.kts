@@ -41,4 +41,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    //implementation("com.github.AmitIshay:TriviaSDK:1.0.8")
+
 }
