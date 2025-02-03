@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinnerDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/difficulty_levels" />
+
+    <Button
+        android:id="@+id/btnFetchQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch Question"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question will appear here"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etUserAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your answer"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnCheckAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Answer"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/btnGenerateQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Question"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
